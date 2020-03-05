@@ -1,0 +1,234 @@
+2020-03-05 10:52:42 ERROR: PDOAdapter selectAll() error: sql=
+select * from persons order by age DESC
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'inlinetestcase.persons' doesn't exist in C:\OSPanel\domains\InlineTestCase\PDOAdapter.php:66
+Stack trace:
+#0 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(66): PDO->query('select * from p...', 5)
+#1 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(40): PDOAdapter->selectAll('select * from p...', NULL)
+#2 C:\OSPanel\domains\InlineTestCase\index.php(11): PDOAdapter->execute('selectAll', 'select * from p...')
+#3 {main}
+2020-03-05 10:53:20 INFO: PDOAdapter -> selectOne() $sql=select * from persons order by age DESC $args=
+2020-03-05 10:53:20 ERROR: PDOAdapter selectOne() error: sql=
+select * from persons order by age DESC
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'inlinetestcase.persons' doesn't exist in C:\OSPanel\domains\InlineTestCase\PDOAdapter.php:82
+Stack trace:
+#0 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(82): PDO->query('select * from p...', 5)
+#1 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(42): PDOAdapter->selectOne('select * from p...', NULL)
+#2 C:\OSPanel\domains\InlineTestCase\index.php(11): PDOAdapter->execute('selectOne', 'select * from p...')
+#3 {main}
+2020-03-05 10:53:28 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 10:53:56 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 10:56:13 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 10:56:13 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id = NULL and age < ? $args=46
+2020-03-05 10:56:33 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 10:56:33 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id = NULL and age < ? $args=Array
+(
+    [0] => 46
+)
+
+2020-03-05 10:58:41 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:00:03 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:00:03 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id = NULL and age < 46 $args=
+2020-03-05 11:00:21 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:00:21 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id = NULL and age < 46 $args=
+2020-03-05 11:00:55 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:02:33 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:02:33 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id = NULL and age < [?] $args=Array
+(
+    [0] => 46
+)
+
+2020-03-05 11:02:33 ERROR: PDOAdapter selectOne() error: sql=
+select * from person where mother_id = NULL and age < [?]
+args=Array
+(
+    [0] => 46
+)
+
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '['46']' at line 1 in C:\OSPanel\domains\InlineTestCase\PDOAdapter.php:79
+Stack trace:
+#0 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(79): PDOStatement->execute(Array)
+#1 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(42): PDOAdapter->selectOne('select * from p...', Array)
+#2 C:\OSPanel\domains\InlineTestCase\index.php(12): PDOAdapter->execute('selectOne', 'select * from p...', Array)
+#3 {main}
+2020-03-05 11:02:45 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:02:45 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id = NULL and age < ? $args=Array
+(
+    [0] => 46
+)
+
+2020-03-05 11:03:46 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:03:46 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id = NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:04:26 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:04:26 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id = NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:05:36 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:05:36 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id = NULL  $args=
+2020-03-05 11:05:57 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:05:57 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id = NULL $args=
+2020-03-05 11:06:32 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:06:32 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL $args=
+2020-03-05 11:06:43 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:06:43 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:10:58 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:10:58 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:10:58 ERROR: PDOAdapter execute() error: sql=
+update person set age = :maxAge where id = :id
+args=Array
+(
+    [:age] => 46
+    [:id] => 1
+)
+
+PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\OSPanel\domains\InlineTestCase\PDOAdapter.php:90
+Stack trace:
+#0 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(90): PDOStatement->execute(Array)
+#1 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(44): PDOAdapter->execute_('update person s...', Array)
+#2 C:\OSPanel\domains\InlineTestCase\index.php(13): PDOAdapter->execute('execute', 'update person s...', Array)
+#3 {main}
+2020-03-05 11:12:03 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:12:03 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:12:03 INFO: PDOAdapter -> selectOne() $sql=update person set age = :maxAge where id = :id $args=Array
+(
+    [:age] => 46
+    [:id] => 1
+)
+
+2020-03-05 11:12:03 ERROR: PDOAdapter selectOne() error: sql=
+update person set age = :maxAge where id = :id
+args=Array
+(
+    [:age] => 46
+    [:id] => 1
+)
+
+PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\OSPanel\domains\InlineTestCase\PDOAdapter.php:79
+Stack trace:
+#0 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(79): PDOStatement->execute(Array)
+#1 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(42): PDOAdapter->selectOne('update person s...', Array)
+#2 C:\OSPanel\domains\InlineTestCase\index.php(13): PDOAdapter->execute('selectOne', 'update person s...', Array)
+#3 {main}
+2020-03-05 11:13:11 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:13:11 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:13:11 INFO: PDOAdapter -> selectOne() $sql=update person set age = :maxAge where id = :id $args=Array
+(
+    [:maxAge] => 46
+    [:id] => 1
+)
+
+2020-03-05 11:13:11 ERROR: PDOAdapter selectOne() error: sql=
+update person set age = :maxAge where id = :id
+args=Array
+(
+    [:maxAge] => 46
+    [:id] => 1
+)
+
+PDOException: SQLSTATE[HY000]: General error in C:\OSPanel\domains\InlineTestCase\PDOAdapter.php:80
+Stack trace:
+#0 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(80): PDOStatement->fetch(5)
+#1 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(42): PDOAdapter->selectOne('update person s...', Array)
+#2 C:\OSPanel\domains\InlineTestCase\index.php(13): PDOAdapter->execute('selectOne', 'update person s...', Array)
+#3 {main}
+2020-03-05 11:14:43 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:14:43 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:14:43 ERROR: PDOAdapter execute() error: sql=
+update person set age = 46 id = 4
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id = 4' at line 1 in C:\OSPanel\domains\InlineTestCase\PDOAdapter.php:90
+Stack trace:
+#0 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(90): PDOStatement->execute(NULL)
+#1 C:\OSPanel\domains\InlineTestCase\PDOAdapter.php(44): PDOAdapter->execute_('update person s...', NULL)
+#2 C:\OSPanel\domains\InlineTestCase\index.php(13): PDOAdapter->execute('execute', 'update person s...')
+#3 {main}
+2020-03-05 11:15:25 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:15:25 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:20:12 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:20:12 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:25:54 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:25:54 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:26:18 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:26:18 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:26:33 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:26:33 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:26:53 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:26:53 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:27:31 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:27:31 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:27:47 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:27:47 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:28:15 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:28:15 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:28:40 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:28:40 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
+2020-03-05 11:28:50 INFO: PDOAdapter -> selectOne() $sql=select * from person order by age DESC $args=
+2020-03-05 11:28:50 INFO: PDOAdapter -> selectOne() $sql=select * from person where mother_id IS NULL and age < :age $args=Array
+(
+    [:age] => 46
+)
+
